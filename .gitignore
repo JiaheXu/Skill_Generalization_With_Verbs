@@ -1,0 +1,26 @@
+# Ignore deviceQuery executable copy
+# Ignore .catkin_profile files that are not to be tracked
+# the default configs are already committed, to add new
+# ones just force commit them! (git add -f ...)
+.catkin_tools/
+
+# Ignore build files
+images/
+
+__pycache__/
+*.pyc
+
+.vscode/
+
+notes.TODO
+
+# ignore desktop icons
+!operations/mmpug_deploy/desktop_icons/.templates
+!operations/mmpug_deploy/desktop_icons/basestation
+operations/mmpug_deploy/desktop_icons
+
+# ignore dds in docker image install
+operations/mmpug_docker/dockerfiles/mmpug/thirdparty-software/download/
+
+# ignore auto-generated ansible template host configurations
+operations/mmpug_ansible/templates/host_ips.generated.yaml

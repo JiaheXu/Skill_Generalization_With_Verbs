@@ -29,7 +29,8 @@ import json
 
 from batch_data_generator import DataGenerator
 ## home project directories ##
-PROJECT_HOME_DIRECTORY = "/home/" #set to your home directory
+#PROJECT_HOME_DIRECTORY = "/home/" #set to your home directory
+PROJECT_HOME_DIRECTORY = "/home/xujiahe/Skill_Generalization_With_Verbs"
 ## image directories for dataset ##
 IMAGES_DIRECTORY = PROJECT_HOME_DIRECTORY + "images/"
 
@@ -1318,6 +1319,10 @@ def main():
     datetime_start = datetime.now()
     start_time_str = datetime_start.strftime("%d-%b-%Y (%H:%M:%S.%f)")
     start_str = "=====>Start:{0}\n".format(start_time_str)
+
+    #CLASSIFIER_EXE_LOG_TXT_PATH = "/home/xujiahe/Skill_Generalization_With_Verbs/Classifier_Train_Test_Log.txt"
+    print("CLASSIFIER_EXE_LOG_TXT_PATH: ", CLASSIFIER_EXE_LOG_TXT_PATH)
+
     append_to_file(CLASSIFIER_EXE_LOG_TXT_PATH, start_str)    
 
     read_command_line_arg()
