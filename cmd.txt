@@ -1,1 +1,5 @@
 python3 multistep_batch_classifier.py -EPOCHS 40 -OPEN_CLOSE True -REMOVE_PART_INSERT_PART True -REMOVE_WHOLE True -ROTATE_VERB True -NONE_VERB True -FLIP True -ROTATE False -Train_Categories_List Box,Dishwasher,Door,Laptop,Microwave,Oven,Refrigerator,Safe,Stapler,StorageFurniture,Toilet,TrashCan,WashingMachine -Test_Translate_Categories_List Box -Test_Open_Close_Categories_List Box -Test_RemovePart_InsertPart_Categories_List Box -Test_RemoveWhole_Categories_List Box -Test_Rotate_Categories_List Box -Test_None_Categories_List Box
+
+
+
+pip3 install -r requirements.txt
