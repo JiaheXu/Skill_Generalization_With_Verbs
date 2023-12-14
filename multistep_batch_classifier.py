@@ -30,7 +30,7 @@ import json
 from batch_data_generator import DataGenerator
 ## home project directories ##
 #PROJECT_HOME_DIRECTORY = "/home/" #set to your home directory
-PROJECT_HOME_DIRECTORY = "/home/xujiahe/Skill_Generalization_With_Verbs"
+PROJECT_HOME_DIRECTORY = "/ws/Skill_Generalization_With_Verbs/"
 ## image directories for dataset ##
 IMAGES_DIRECTORY = PROJECT_HOME_DIRECTORY + "images/"
 
@@ -380,7 +380,7 @@ def check_prediction(predictions, actual_labels):
             correct_counter += 1
         else: 
             incorrect_counter += 1
-    correct_percentage = correct_counter/(correct_counter+incorrect_counter)
+    correct_percentage = correct_counter/(correct_counter+incorrect_counter + 0.001)
     print("correct_counter:", correct_counter)
     print("incorrect_counter:", incorrect_counter)
     print("correct_percentage:", correct_percentage)
@@ -797,6 +797,7 @@ def train_batch(train_filenames, train_labels, val_filenames, val_labels):
 
     model = tf.keras.Model(inputs=input_init_train_keras, outputs=probabilities)    
     model.summary()
+
     lrr= ReduceLROnPlateau(monitor='val_accuracy', factor=.01, patience=3, min_lr=1e-5)
     batch_size= 32 #32
     print("batch_size:", batch_size)

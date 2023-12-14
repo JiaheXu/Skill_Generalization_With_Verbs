@@ -2,4 +2,9 @@ python3 multistep_batch_classifier.py -EPOCHS 40 -OPEN_CLOSE True -REMOVE_PART_I
 
 
 
+python cma_es_trajectory.py -OBJECT_FOLDER_PATH box5/ -MODEL_DIRECTORY Classification_conv_40_flip-True_rotate-False_5steps_rotation_argment-304590_translateremoveWholerotatenoneBox_openremovePart-Box_removeWhole-Box -VERB raise
+
+
+python3 cma_es_trajectory.py -OBJECT_FOLDER_PATH box5/ -MODEL_DIRECTORY Classification_conv_40_flip-True_rotate-False_5steps_rotation_argment-304590_translateremoveWholerotatenoneBox_openremovePart-Box_removeWhole-Box -VERB raise
+
 pip3 install -r requirements.txt
